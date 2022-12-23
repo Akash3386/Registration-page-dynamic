@@ -48,27 +48,27 @@ function deletePost(){
         },1000)
     })
 }
-// createPost({ title: 'Post 3',body: 'This is post three'})
-// .then(()=>{
-//     getPosts();
-//     deletePost().then(()=>{
-//         deletePost().then(()=>{
-//             deletePost().then(()=>{
-//                 deletePost()
-//                 .catch((err)=>{
-//                     console.log('Inside catch block',err);
-//                 })
-//             }).catch((err)=>{})
-//         }).catch((err)=>{})
-//     }).catch((err)=>{})
-// }).catch((err)=>{})
+createPost({ title: 'Post 3',body: 'This is post three'})
+.then(()=>{
+    getPosts();
+    deletePost().then(()=>{
+        deletePost().then(()=>{
+            deletePost().then(()=>{
+                deletePost()
+                .catch((err)=>{
+                    console.log('Inside catch block',err);
+                })
+            }).catch((err)=>{})
+        }).catch((err)=>{})
+    }).catch((err)=>{})
+}).catch((err)=>{})
 
-// createPost({ title: 'Post 4',body: 'This is post four'})
-// .then(()=>{
-//     getPosts
-//     deletePost   
-// })
-// console.log('...')
+createPost({ title: 'Post 4',body: 'This is post four'})
+.then(()=>{
+    getPosts
+    deletePost   
+})
+
 // promise.all
 // const promise1 = Promise.resolve('Hello world');
 // const promise2 = 10;
