@@ -48,55 +48,55 @@ function deletePost(){
         },1000)
     })
 }
-createPost({ title: 'Post 3',body: 'This is post three'})
-.then(()=>{
-    getPosts();
-    deletePost().then(()=>{
-        deletePost().then(()=>{
-            deletePost().then(()=>{
-                deletePost()
-                .catch((err)=>{
-                    console.log('Inside catch block',err);
-                })
-            }).catch((err)=>{})
-        }).catch((err)=>{})
-    }).catch((err)=>{})
-}).catch((err)=>{})
+// createPost({ title: 'Post 3',body: 'This is post three'})
+// .then(()=>{
+//     getPosts();
+//     deletePost().then(()=>{
+//         deletePost().then(()=>{
+//             deletePost().then(()=>{
+//                 deletePost()
+//                 .catch((err)=>{
+//                     console.log('Inside catch block',err);
+//                 })
+//             }).catch((err)=>{})
+//         }).catch((err)=>{})
+//     }).catch((err)=>{})
+// }).catch((err)=>{})
 
-createPost({ title: 'Post 4',body: 'This is post four'})
-.then(()=>{
-    getPosts
-    deletePost   
-})
+// createPost({ title: 'Post 4',body: 'This is post four'})
+// .then(()=>{
+//     getPosts
+//     deletePost   
+// })
 
 // promise.all
-// const promise1 = Promise.resolve('Hello world');
-// const promise2 = 10;
-// const promise3 = new Promise((resolve,reject)=>{
-//     setTimeout(resolve,2000,'Goodbye')
-// });
-// Promise.all([promise1, promise2, promise3])
-// .then(values=>console.log(values));
-// const previousTime =  new Date();
-// console.log("Before cteating post 3, user lastactivityTime = ",previousTime);
+const promise1 = Promise.resolve('Hello world');
+const promise2 = 10;
+const promise3 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,2000,'Goodbye')
+});
+Promise.all([promise1, promise2, promise3])
+.then(values=>console.log(values));
+const previousTime =  new Date();
+console.log("Before cteating post 3, user lastactivityTime = ",previousTime);
 
-// const promise1 = createPost({ title: 'Post 3',body: 'This is post three'});
+const promise1 = createPost({ title: 'Post 3',body: 'This is post three'});
 
-// const updateLastActivityTime = new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
+const updateLastActivityTime = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
 
-//         resolve(new Date().getTime())
-//     })
-// });
-// Promise.all([promise1,updateLastActivityTime])
-// .then(([createpostresolve,lastactivitytimeresolve])=>{
-//     console.log('After Creating post 3 >>>>>');
-//     console.log("posts >>> ",createpostresolve,);
-//     deletePost().catch((err)=>{                   
-//       console.log('Inside catch block',err);
-//     })
-//     console.log("User last activity time",lastactivitytimeresolve)
+        resolve(new Date().getTime())
+    })
+});
+Promise.all([promise1,updateLastActivityTime])
+.then(([createpostresolve,lastactivitytimeresolve])=>{
+    console.log('After Creating post 3 >>>>>');
+    console.log("posts >>> ",createpostresolve,);
+    deletePost().catch((err)=>{                   
+      console.log('Inside catch block',err);
+    })
+    console.log("User last activity time",lastactivitytimeresolve)
       
-// })
-// .catch(err=> console.log(err));
+})
+.catch(err=> console.log(err));
 
